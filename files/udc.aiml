@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>salutare</pattern>
+    <template>Salut, cu ce te pot ajuta</template>
+  </category>
+
+<category>
+    <pattern>buna ziua</pattern>
+    <template>Buna ziua si bine ati venit.Noi suntem specializati in a depista cauza defectelor din instalatie.Spuneti-mi ce problema aveti </template>
+</category>
+
+<category>
+    <pattern>buna ziua ma puteti ajuta</pattern>
+    <template>Da desigur, spune-mi ce vrei sa stii</template>
+</category>
+
+<category>
+    <pattern>salut</pattern>
+    <template>Buna ziua, cu ce te pot ajuta</template>
+</category>
+
+
+<category>
+    <pattern>am o problema legata de *</pattern>
+    <template>
+      <think><set name="topic"><star /></set></think>
+      Ce problema aveti mai exact?
+    </template>
+</category>
+
+<category>
+    <pattern>am o problema cu *</pattern>
+    <template>
+      <think><set name="topic"><star /></set></think>
+      Ce problema aveti mai exact?
+    </template>
+</category>
+
+<category>
+    <pattern>* nu functioneaza</pattern>
+    <template>
+      <think><set name="topic"><star /></set></think>
+      Ce problema aveti mai exact?
+    </template>
+</category>
+
+<category>
+    <pattern>am o problema</pattern>
+    <template>Ce problema aveti?</template>
+</category>
+
+<category>
+    <pattern>legata de *</pattern>
+    <template>
+      <think><set name="topic"><star /></set></think>
+      Ce problema aveti mai exact?
+    </template>
+</category>
+/////////contactor
+
+
+
+<topic name="contactor">
+
+<category>
+    <pattern>nu functioneaza</pattern>
+    <template>Nu-si schimba starea contactelor  sau
+              are probleme legate de cuplare si decuplare?
+              
+              <learn>
+                  
+                  /////////decuplarea
+                  
+                 <category>
+                     <pattern>decupleaza prea incet</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>decuplarea are loc prea incet</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>dureaza prea mult pana decupleaza</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                  
+                 <category>
+                     <pattern>timpul de decuplare este mare</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>timpul de decuplare este prea mare</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>decupleaza incet</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 
+                 
+                  /// partea de cuplare
+                
+                  <category>
+                        <pattern> nu cupleaza</pattern>
+                            <template>
+                                Spuneti-mi tensiunea  de alimentare a bobinei?
+                                    <learn>
+                                        
+                                        <category>
+                                            <pattern>230v</pattern>
+                                            <template>
+                                                Scoateti bobina afara.Contine mai mult de 10 spire?
+                                                <learn>
+                                                    <category>
+                                                        <pattern>nu</pattern>
+                                                        <template>Atunci bobina pe care o utilizati nu este bobina de tensiune
+                                                        ci bobina de curent</template>
+                                                    </category>
+                                                </learn>
+                                            </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>este de 24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>este de 24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                         <category>
+                                             <pattern>24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        <category>
+                                             <pattern>are 24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>24 de volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        <category>
+                                             <pattern>are 24 de volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>este de 24 de volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta bobina
+                                                 </template>
+                                        </category>
+                                        <category>
+                                             <pattern>este de 24 volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>nu stiu</pattern>
+                                                <template>Desfaceti contactorul si scoateti-o afara.Pe partea inferioara scrie tensiunea de alimentare              
+                                                </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>nu sunt sigur</pattern>
+                                                <template>Desfaceti contactorul si scoateti-o afara.Pe partea inferioara scrie tensiunea de alimentare              
+                                                </template>
+                                        </category>
+                       </learn>
+               </template>
+            </category>    
+         </learn>
+              
+    </template>
+</category>
+
+</topic>
+
+
+
+
+<topic name="contactorul">
+
+<category>
+    <pattern>nu functioneaza</pattern>
+    <template>Nu-si schimba starea contactelor  sau
+              are probleme legate de cuplare si decuplare?
+              
+              <learn>
+                  
+                  /////////decuplarea
+                  
+                 <category>
+                     <pattern>decupleaza prea incet</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>decuplarea are loc prea incet</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>dureaza prea mult pana decupleaza</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                  
+                 <category>
+                     <pattern>timpul de decuplare este mare</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>timpul de decuplare este prea mare</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 <category>
+                     <pattern>decupleaza incet</pattern>
+                     <template>Timpul de decuplare are legatura cu intrefierul.Mai exact cu distanta mica dintre cele
+                     2 armaturi.Cu cat este mai mica distanta dintre armaturi cu atat este mai mare timpul de decuplare
+                     </template>
+                 </category>
+                 
+                 
+                 
+                  /// partea de cuplare
+                
+                  <category>
+                        <pattern> nu cupleaza</pattern>
+                            <template>
+                                Spuneti-mi tensiunea  de alimentare a bobinei?
+                                    <learn>
+                                        
+                                        <category>
+                                            <pattern>230v</pattern>
+                                            <template>
+                                                Scoateti bobina afara.Contine mai mult de 10 spire?
+                                                <learn>
+                                                    <category>
+                                                        <pattern>nu</pattern>
+                                                        <template>Atunci bobina pe care o utilizati nu este bobina de tensiune
+                                                        ci bobina de curent</template>
+                                                    </category>
+                                                </learn>
+                                            </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>este de 24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>este de 24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                         <category>
+                                             <pattern>24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        <category>
+                                             <pattern>are 24v</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>24 de volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        <category>
+                                             <pattern>are 24 de volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta
+                                                 bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>este de 24 de volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta bobina
+                                                 </template>
+                                        </category>
+                                        <category>
+                                             <pattern>este de 24 volti</pattern>
+                                                <template>Problema este ca bobina este prea mica si nu are putere sa faca cuplul mecanic.Trebuie sa luati alta bobina
+                                                 </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>nu stiu</pattern>
+                                                <template>Desfaceti contactorul si scoateti-o afara.Pe partea inferioara scrie tensiunea de alimentare              
+                                                </template>
+                                        </category>
+                                        
+                                        <category>
+                                             <pattern>nu sunt sigur</pattern>
+                                                <template>Desfaceti contactorul si scoateti-o afara.Pe partea inferioara scrie tensiunea de alimentare              
+                                                </template>
+                                        </category>
+                       </learn>
+               </template>
+            </category>    
+         </learn>
+              
+    </template>
+</category>
+
+</topic>
+
+<category>
+    <pattern>contactorul cupleaza dar nu-si schimba starea contactelor  </pattern>
+    <template>Probabil este o defectiune interna.Cel mai probabil pastilele de pe contacte sunt arse si
+    din acest motiv nu circula curentul</template> 
+</category>
+
+////////////////////////////////////////////protectia 
+
+
+<topic name="disjunctor">
+    <category>
+        <pattern>nu porneste alimentarea</pattern>
+        <template>Masurati din aproape in aproape.Ati verificat daca aveti tensiune la bornele de intrare?
+            
+            <learn>
+                <category>
+                    <pattern>da</pattern>
+                    <template>Activati disjuntorul.Aveti tensiune si la bornele de iesire?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Inseamna ca nu exista continuitate.Contactele sunt arse.
+                                Inlocuiti disjunctorul
+                                </template>
+                            </category>
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+            
+             <learn>
+                <category>
+                    <pattern>este tensiune</pattern>
+                    <template>Activati disjuntorul.Aveti tensiune si la bornele de iesire?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Inseamna ca nu exista continuitate.Contactele sunt arse.
+                                Inlocuiti disjunctorul
+                                </template>
+                            </category>
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+            
+             <learn>
+                <category>
+                    <pattern>da este tensiune</pattern>
+                    <template>Activati disjuntorul.Aveti tensiune si la bornele de iesire?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Inseamna ca nu exista continuitate.Contactele sunt arse.
+                                Inlocuiti disjunctorul
+                                </template>
+                            </category>
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+            
+        </template>
+    </category>
+    
+    //////////deconecteaza prea repede
+    
+    <category>
+        <pattern>deconecteaza mult prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+        
+    </category>
+    
+    <category>
+        <pattern>deconecteaza alimentarea mult prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>deconecteaza alimentarea prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>intrerupe alimentarea prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                
+                /////////curentul este acelasi pe faze
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+                
+                /////curent mai mare pe una din faze
+                <category>
+                    <pattern>da</pattern>
+                    <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                </category>
+                
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>intrerupe alimentarea mult prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                             <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+</topic>
+
+<topic name="disjunctorul">
+    
+     <category>
+        <pattern>nu porneste alimentarea</pattern>
+        <template>Masurati din aproape in aproape.Ati verificat daca aveti tensiune la bornele de intrare?
+            
+            <learn>
+                <category>
+                    <pattern>da</pattern>
+                    <template>Activati disjuntorul.Aveti tensiune si la bornele de iesire?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Inseamna ca nu exista continuitate.Contactele sunt arse.
+                                Inlocuiti disjunctorul
+                                </template>
+                            </category>
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+            
+             <learn>
+                <category>
+                    <pattern>este tensiune</pattern>
+                    <template>Activati disjuntorul.Aveti tensiune si la bornele de iesire?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Inseamna ca nu exista continuitate.Contactele sunt arse.
+                                Inlocuiti disjunctorul
+                                </template>
+                            </category>
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+            
+             <learn>
+                <category>
+                    <pattern>da este tensiune</pattern>
+                    <template>Activati disjuntorul.Aveti tensiune si la bornele de iesire?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Inseamna ca nu exista continuitate.Contactele sunt arse.
+                                Inlocuiti disjunctorul
+                                </template>
+                            </category>
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+            
+        </template>
+    </category>
+    
+    //////////deconecteaza prea repede
+    
+    <category>
+        <pattern>deconecteaza mult prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+        
+    </category>
+    
+    <category>
+        <pattern>deconecteaza alimentarea mult prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>deconecteaza alimentarea prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>intrerupe alimentarea prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                
+                /////////curentul este acelasi pe faze
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+                
+                /////curent mai mare pe una din faze
+                <category>
+                    <pattern>da</pattern>
+                    <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                </category>
+                
+            </learn>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>intrerupe alimentarea mult prea repede</pattern>
+        <template>Masurati din aproape in aproape.Aveti cumva un curent mult mai mare pe una din faze?
+            <learn>
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Atunci verificati aparatul.Curentul nominal este acelasi cu curentul nominal
+                    al motorului?
+                        <learn>
+                            <category>
+                                <pattern>nu</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal de pe aparat este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                            <category>
+                                <pattern>curentul nominal al aparatului este mai mic</pattern>
+                                <template>Aparatul este ales gresit.Trebuie sa schimbati aparatul
+                                cu unul care are acelasi curent nominal ca al motorului.</template>
+                            </category>
+                            
+                             <category>
+                                 <pattern>da</pattern>
+                                 <template>Inseamna ca undeva pe traseu 2 faze se ating intre ele.Aveti un scurt circuit</template>
+                             </category>
+                            
+                        </learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+</topic>
+
+<topic name="protectia termica">
+    
+    <category>
+        <pattern>intervine mult prea repede</pattern>
+        <template>La ce va referiti cand spuneti ca intervine mult prea repede? 
+         Intervine la o distanta de cateva ore sau la o distanta de cateva zile?
+         <learn>
+             
+             ////intervine la o distanta de cateva zile
+             
+             <category>
+                 <pattern>intervine o data pe zi</pattern>
+                 <template>Motivul pentru care intervine este ca motorul a efectuat un cuplu mecanic mai mare decat
+                  cel pentru care a fost proiectat.Protectia intervine pentru a-i da timp sa se mai raceasca
+                  </template>
+             </category>
+             
+             <category>
+                 <pattern>intervine o data la o zi</pattern>
+                 <template>Motivul pentru care intervine este ca motorul a efectuat un cuplu mecanic mai mare decat
+                  cel pentru care a fost proiectat.Protectia intervine pentru a-i da timp sa se mai raceasca
+                  </template>
+             </category>
+             
+             <category>
+                 <pattern>intervine la o distanta de cateva zile</pattern>
+                 <template>Motivul pentru care intervine este ca motorul a efectuat un cuplu mecanic mai mare decat
+                  cel pentru care a fost proiectat.Protectia intervine pentru a-i da timp sa se mai raceasca
+                  </template>
+             </category>
+             
+             
+             <category>
+                 <pattern>intervine la o distanta de cateva ore</pattern>
+                 <template>Verificati releul termic.Curentul nominal de pe aparat trebuie sa fie acelasi 
+                 cu curentul nominal al motorului.Corespund cele 2 valori?
+                    <learn>
+                        <category>
+                            <pattern>nu</pattern>
+                            <template>Trebuie sa schimbati releu termic.Releul termic opreste motorul
+                            deoarece considera ca motorul functioneaza in regim de suprasarcina.
+                            Este foarte important ca cele 2 calori sa fie egale sau apropiate.
+                            </template>
+                        </category>
+                        
+                        <category>
+                            <pattern>da</pattern>
+                            <template>Atunci ar putea fi una din urmatoarele 2 probleme:
+                            1.Trebuie sa schimbati motorul doarece nu a fost proiectat pentru a putea
+                            face cuplu mecanic atat de mare.
+                            2.Trebuie sa micsorati cuplul mecanic pe care motorul este nevoit sa-l faca
+                            </template>
+                        </category>
+                    </learn>
+                  </template>
+                 
+             </category>
+             
+             <category>
+                 <pattern>intervine la cateva ore</pattern>
+                 <template>Verificati releul termic.Curentul nominal de pe aparat trebuie sa fie acelasi 
+                 cu curentul nominal al motorului.Corespund cele 2 valori?
+                    <learn>
+                        <category>
+                            <pattern>nu</pattern>
+                            <template>Trebuie sa schimbati releu termic.Releul termic opreste motorul
+                            deoarece considera ca motorul functioneaza in regim de suprasarcina.
+                            Este foarte important ca cele 2 calori sa fie egale sau apropiate.
+                            </template>
+                        </category>
+                        
+                        <category>
+                            <pattern>da</pattern>
+                            <template>Atunci ar putea fi una din urmatoarele 2 probleme:
+                            1.Trebuie sa schimbati motorul doarece nu a fost proiectat pentru a putea
+                            face cuplu mecanic atat de mare.
+                            2.Trebuie sa micsorati cuplul mecanic pe care motorul este nevoit sa-l faca
+                            </template>
+                        </category>
+                    </learn>
+                  </template>
+                 
+             </category>
+        </learn>
+         
+         </template>
+    </category>
+    
+    
+    
+</topic>
+
+
+<topic name="motor">
+    
+    <category>
+        <pattern>se opreste des</pattern>
+        <template>Cand spuneti ca se opreste des la ce va referiti?Se opreste la cateva ore sau se opreste la o distanta de o zi?
+            <learn>
+                /////se opreste in fiecare zi
+                <category>
+                    <pattern>se opreste o data pe zi</pattern>
+                    <template>Motivul pentru care se opreste este ca motorul trebuie sa efectueze cuplu mecanic mult prea mare si
+                    incepe sa traga un curent mult prea mare pentru cat a fost proiectat.Din aceasta cauza intervine protectia
+                    termica.</template>
+                </category>
+                
+                <category>
+                    <pattern>se opreste in fiecare zi</pattern>
+                    <template>Motivul pentru care se opreste este ca motorul trebuie sa efectueze cuplu mecanic mult prea mare si
+                    incepe sa traga un curent mult prea mare pentru cat a fost proiectat.Din aceasta cauza intervine protectia
+                    termica.</template>
+                </category>
+                
+                //////////se opreste in fiecare ora
+                
+                <category>
+                    <pattern>se opreste in fiecare ora</pattern>
+                    <template>Spuneti-mi la ce curent nominal functioneaza motorul
+                        <learn>
+                            
+                            <category>
+                                <pattern>7a</pattern>
+                                <template>Spuneti-mi la ce curent nominal functioneaza releul
+                                
+                                    <learn>
+                                        <category>
+                                            <pattern>7a</pattern>
+                                            <template>Motorul are de efectuat un cuplu mecanic mult prea mare</template>
+                                        </category>
+                                        
+                                      <category>
+                                          <pattern>5a</pattern>
+                                          <template>Releul a fost ales gresit.Din aceasta cauza intervine protectia termica
+                                          si opreste motorul.Alegeti un releu tot de 7a
+                                          </template>
+                                      </category>  
+                                        
+                                    </learn>
+                                    
+                                </template>
+                            </category>
+                         </learn>
+                    </template>
+                </category>
+                
+                /////se opreste la cateva ore
+                
+                <category>
+                    <pattern>se opreste la cateva ore</pattern>
+                    <template>Spuneti-mi la ce curent nominal functioneaza motorul
+                        <learn>
+                            
+                            <category>
+                                <pattern>7a</pattern>
+                                <template>Spuneti-mi la ce curent nominal functioneaza releul
+                                
+                                    <learn>
+                                        <category>
+                                            <pattern>7a</pattern>
+                                            <template>Motorul are de efectuat un cuplu mecanic mult prea mare</template>
+                                        </category>
+                                        
+                                      <category>
+                                          <pattern>5a</pattern>
+                                          <template>Releul a fost ales gresit.Din aceasta cauza intervine protectia termica
+                                          si opreste motorul.Alegeti un releu tot de 7a
+                                          </template>
+                                      </category>  
+                                        
+                                    </learn>
+                                    
+                                </template>
+                            </category>
+                         </learn>
+                    </template>
+                </category>
+                
+                /////// din ora in ora
+                
+                <category>
+                    <pattern>din ora in ora</pattern>
+                    <template>Spuneti-mi la ce curent nominal functioneaza motorul
+                        <learn>
+                            
+                            <category>
+                                <pattern>7a</pattern>
+                                <template>Spuneti-mi la ce curent nominal functioneaza releul
+                                
+                                    <learn>
+                                        <category>
+                                            <pattern>7a</pattern>
+                                            <template>Motorul are de efectuat un cuplu mecanic mult prea mare</template>
+                                        </category>
+                                        
+                                      <category>
+                                          <pattern>5a</pattern>
+                                          <template>Releul a fost ales gresit.Din aceasta cauza intervine protectia termica
+                                          si opreste motorul.Alegeti un releu tot de 7a
+                                          </template>
+                                      </category>  
+                                        
+                                    </learn>
+                                    
+                                </template>
+                            </category>
+                         </learn>
+                    </template>
+                </category>
+                
+                //////  in fiecare ora
+                
+                <category>
+                    <pattern>in fiecare ora</pattern>
+                    <template>Spuneti-mi la ce curent nominal functioneaza motorul
+                        <learn>
+                            
+                            <category>
+                                <pattern>7a</pattern>
+                                <template>Spuneti-mi la ce curent nominal functioneaza releul
+                                
+                                    <learn>
+                                        <category>
+                                            <pattern>7a</pattern>
+                                            <template>Motorul are de efectuat un cuplu mecanic mult prea mare</template>
+                                        </category>
+                                        
+                                      <category>
+                                          <pattern>5a</pattern>
+                                          <template>Releul a fost ales gresit.Din aceasta cauza intervine protectia termica
+                                          si opreste motorul.Alegeti un releu tot de 7a
+                                          </template>
+                                      </category>  
+                                        
+                                    </learn>
+                                    
+                                </template>
+                            </category>
+                         </learn>
+                    </template>
+                </category>
+                
+                ////////
+            </learn>
+        </template>
+    </category>
+    
+    ////////////bazaie
+    <category>
+        <pattern>bazaie</pattern>
+        <template>Motorul este alimentat la o tenisune mult prea mica</template>
+    </category>
+    
+    ////////nu-si inverseaza sensul
+    
+    <category>
+        <pattern>nu-si inverseaza sensul</pattern>
+        <template>Verificati contactorul numarul 2.Aveti fazele inversate intre ele?
+            <learn>
+                //nu
+                <category>
+                    <pattern>nu</pattern>
+                    <template>Trebuie sa conectati linia 1 de la contactorul 1 la L2 de la
+                    contactorul numarul 2</template>
+                </category>
+                
+                ///da
+                <category>
+                    <pattern>da</pattern>
+                    <template>Dupa ce alimentati contactorul numarul doi ce se intampla cu butonul de
+                    deasupra?
+                        <learn></learn>
+                    </template>
+                </category>
+            </learn>
+        </template>
+    </category>
+    
+    ///nu-si inverseaza sensul de rotatie
+    
+    
+    ///nu-si schimba directia de rotire
+    
+    
+</topic>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</aiml>
